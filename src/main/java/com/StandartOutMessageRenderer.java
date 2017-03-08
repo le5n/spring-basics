@@ -1,4 +1,7 @@
-package com.le5n;
+package com;
+
+import com.le5n.message.MessageProvider;
+import com.le5n.message.MessageRenderer;
 
 public class StandartOutMessageRenderer implements MessageRenderer {
     private MessageProvider messageProvider;
