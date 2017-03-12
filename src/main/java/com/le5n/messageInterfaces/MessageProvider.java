@@ -1,4 +1,4 @@
-package com.le5n.message;
+package com.le5n.messageInterfaces;
 
 public interface MessageProvider {
     String getMessage();

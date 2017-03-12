@@ -1,6 +1,6 @@
-package com.le5n.impl;
+package com.le5n.standard.impl;
 
-import com.le5n.message.MessageProvider;
+import com.le5n.messageInterfaces.MessageProvider;
 
 public class HelloWorldMessageProvider implements MessageProvider {
     @Override

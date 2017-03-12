@@ -1,6 +1,7 @@
 package com.le5n.annotations;
 
-import com.le5n.message.MessageProvider;
+import com.le5n.messageInterfaces.MessageProvider;
+import com.le5n.messageInterfaces.MessageRenderer;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
 public class Main {
@@ -10,5 +11,13 @@ public class Main {
         ctx.refresh();
         MessageProvider messageProvider = ctx.getBean("messageProvider", MessageProvider.class);
         System.out.println(messageProvider.getMessage());
+
+        //setter injection
+        GenericXmlApplicationContext ctxSetter = new GenericXmlApplicationContext();
+        ctxSetter.load("classpath:app-context-annotation.xml");
+        ctxSetter.refresh();
+
+        MessageRenderer messageRenderer = ctxSetter.getBean("messageRenderer", MessageRenderer.class);
+        messageRenderer.render();
     }
 }
