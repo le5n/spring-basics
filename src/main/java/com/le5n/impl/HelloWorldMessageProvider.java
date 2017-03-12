@@ -1,4 +1,4 @@
-package com;
+package com.le5n.impl;
 
 import com.le5n.message.MessageProvider;
 
