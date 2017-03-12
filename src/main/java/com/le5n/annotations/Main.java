@@ -6,18 +6,26 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 
 public class Main {
     public static void main(String[] args) {
-        GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
-        ctx.load("classpath:app-context-annotation.xml");
-        ctx.refresh();
-        MessageProvider messageProvider = ctx.getBean("messageProvider", MessageProvider.class);
-        System.out.println(messageProvider.getMessage());
+//        GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
+//        ctx.load("classpath:app-context-annotation.xml");
+//        ctx.refresh();
+//        MessageProvider messageProvider = ctx.getBean("messageProvider", MessageProvider.class);
+//        System.out.println(messageProvider.getMessage());
+//
+//        //setter injection
 
-        //setter injection
-        GenericXmlApplicationContext ctxSetter = new GenericXmlApplicationContext();
-        ctxSetter.load("classpath:app-context-annotation.xml");
-        ctxSetter.refresh();
+//        GenericXmlApplicationContext ctxSetter = new GenericXmlApplicationContext();
+//        ctxSetter.load("classpath:app-context-annotation.xml");
+//        ctxSetter.refresh();
+//
+//        MessageRenderer messageRenderer = ctxSetter.getBean("messageRenderer", MessageRenderer.class);
+//        messageRenderer.render();
 
-        MessageRenderer messageRenderer = ctxSetter.getBean("messageRenderer", MessageRenderer.class);
-        messageRenderer.render();
+        //constructor injection
+        GenericXmlApplicationContext ctxConstr = new GenericXmlApplicationContext();
+        ctxConstr.load("classpath:constructor/app-context-constr-annotations.xml");
+        ctxConstr.refresh();
+        MessageProvider messageProviderConstr = ctxConstr.getBean("configurableMessageProvider", MessageProvider.class);
+        System.out.println(messageProviderConstr.getMessage());
     }
 }
