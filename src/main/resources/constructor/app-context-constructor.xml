@@ -6,5 +6,6 @@
 <bean id="configurableMessageProvider"
       class="com.le5n.constructor.ConfigurableMessageProvider">
     <constructor-arg value="Configurable message"/>
+    <!--if there are constructors with same amount of values, you can also set the type of argument-->
 </bean>
 </beans>

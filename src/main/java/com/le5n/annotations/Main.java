@@ -7,7 +7,7 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 public class Main {
     public static void main(String[] args) {
 //        GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
-//        ctx.load("classpath:app-context-annotation.xml");
+//        ctx.load("classpath:annotations/app-context-annotation.xml");
 //        ctx.refresh();
 //        MessageProvider messageProvider = ctx.getBean("messageProvider", MessageProvider.class);
 //        System.out.println(messageProvider.getMessage());
@@ -15,7 +15,7 @@ public class Main {
 //        //setter injection
 
 //        GenericXmlApplicationContext ctxSetter = new GenericXmlApplicationContext();
-//        ctxSetter.load("classpath:app-context-annotation.xml");
+//        ctxSetter.load("classpath:annotations/app-context-annotation.xml");
 //        ctxSetter.refresh();
 //
 //        MessageRenderer messageRenderer = ctxSetter.getBean("messageRenderer", MessageRenderer.class);
